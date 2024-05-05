@@ -1,0 +1,27 @@
+<ion-content class="ion-padding">
+  <div class="profile-form ion-text-center">
+    <ion-title labelPlacement="stacked" size="large" style="font-size: 25px; margin-left: 10px;">
+      LOGIN
+    </ion-title>
+    <!-- Two forms for entering gmail & password, with button for visibility -->
+    <ion-item>
+      <ion-label>Gmail:</ion-label>
+      <ion-input type="text" [(ngModel)]="gmail" size="large"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Password:</ion-label>
+      <ion-input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password" size="large"></ion-input>
+      <button ion-button clear slot="end" class="password-toggle" (click)="togglePasswordVisibility()">
+        <ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon><!-- If showpassword is true, eyes off icon is displayed -->
+      </button>
+    </ion-item>
+    
+    <ion-button expand="full" color="success" style="margin-top: 40px;" (click)="navigate()">Login</ion-button>
+    
+    <div style="margin-top: 10px;">
+      <span>Dont have an account? </span>
+      <a (click)="signup()">Signup</a>
+    </div>
+  </div>
+</ion-content>

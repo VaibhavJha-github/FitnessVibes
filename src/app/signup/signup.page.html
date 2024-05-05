@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title labelPlacement="stacked" size="large" style="font-size: 25px; text-align: center;">
+      CREATE ACCOUNT
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-form ion-text-center">
+    <div class="image-container">
+      <img [src]="imageFile" class="circular-border" style="margin-left: 10px; margin-top: 5px; margin-bottom: 15px;">
+    </div>
+    <label class="file-input-label">
+      <input #fileInput type="file" accept="image/*" (change)="imageSelected(fileInput.files)" multiple>
+      <ion-icon name="cloud-upload-outline" class="upload-icon"></ion-icon>
+      <span>Choose Profile Picture</span>
+    </label>
+  
+    <ion-list>
+      <ion-item>
+        <ion-label>Name:</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Age:</ion-label>
+        <ion-input type="number" [(ngModel)]="age" maxlength="3"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gender:</ion-label>
+        <ion-input type="text" [(ngModel)]="gender"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone(+61):</ion-label>
+        <ion-input type="number" [(ngModel)]="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gmail:</ion-label>
+        <ion-input type="text" [(ngModel)]="gmail"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password:</ion-label>
+        <ion-input [type]="showPassword ? 'text' : 'password'" [(ngModel)]="password"></ion-input>
+        <button ion-button clear slot="end" class="password-toggle" (click)="togglePasswordVisibility()">
+          <ion-icon [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-label style="font-size: 20px;">Date of birth:</ion-label>
+      <ion-item>
+        <ion-datetime
+          display-format="MMM DD, YYYY HH:mm"
+          [(ngModel)]="reminder"
+          class="small-calendar"
+          style="margin-left: 10px;"
+        ></ion-datetime>
+      </ion-item>      
+      
+      <ion-item>
+        <ion-label style="font-size: small;">Receive promotional emails from FitnessVibes?</ion-label>
+        <ion-toggle [(ngModel)]="showNotifications" readonly></ion-toggle>
+      </ion-item>
+
+      <ion-button expand="full" color="success" (click)="onSignup()">Signup</ion-button>
+      <div style="margin-top: 10px;">
+        <span>Already have an account? </span>
+        <a (click)="login()">Login</a>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,73 @@
+ion-content {
+    --background: transparent;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .profile-form ion-list {
+    background-color: transparent;
+  }
+  
+  .profile-icon {
+    font-size: 150px;
+    margin-bottom: 20px;
+    margin-top: -25px;
+  }
+  
+  ion-label {
+    font-weight: bold;
+   //color: #333;
+  }
+  
+  ion-input {
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 23px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 15px;
+    
+  }
+  
+  ion-toggle {
+    margin-top: 10px;
+  }
+  
+  .circular-border {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 5px; /* change the space between */
+    margin-top: 15px;
+  }
+  
+.circular-border2 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 5px; /* change the space between */
+    margin-left: 15px;
+  }
+
+  .image-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  

@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="app-title">
+      FITNESSVIBES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+   
+  
+    <ion-list-header class="checklist-header">
+      Checklist
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Preworkout?</ion-label>
+      <img class="images" alt="" src="assets/images/pre.png" style="width: 60px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Post workout?</ion-label>
+      <img class="images" alt="" src="assets/images/whey.png" style="width: 60px; height: 80px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked2" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Before sleep?</ion-label>
+      <img class="images" alt="" src="assets/images/whey.png" style="width: 60px; height: 80px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked3" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-list-header class="checklist-header">
+    Food intake tracker
+  </ion-list-header>
+  <app-my-component></app-my-component>
+</ion-content>

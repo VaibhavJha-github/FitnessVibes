@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title labelPlacement="stacked" size="large" style="font-size: 25px; text-align: center;">
+      ACCOUNT
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="profile-form ion-text-center">
+      <div class="image-container">
+        <img [src]="imageFile" class="circular-border" style="margin-left: 10px; margin-top: 5px; margin-bottom: 15px;">
+      </div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Name:</ion-label>
+        <ion-input type="text" [(ngModel)]="name" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Age:</ion-label>
+        <ion-input type="number" [(ngModel)]="age" maxlength="3" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gender:</ion-label>
+        <ion-input type="text" [(ngModel)]="gender" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone(+61):</ion-label>
+        <ion-input type="number" [(ngModel)]="number" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Gmail:</ion-label>
+        <ion-input type="text" [(ngModel)]="gmail" readonly></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Date of birth:</ion-label>
+        <ion-text>{{reminder}}</ion-text>
+      </ion-item>
+      
+    </ion-list>
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+<!--<ion-content>
+  <ion-icon aria-hidden="true" name="person-circle-outline" style="font-size: 108px; margin-left: 140px;"></ion-icon>
+
+  <ion-item>
+    <ion-input type='text'>Vaibhav Jha</ion-input>
+  </ion-item> 
+  <ion-item>
+    <ion-input type="number" maxlength="9" inputmode="numeric">+61 449645654</ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type='number' maxlength="3">21</ion-input>
+  </ion-item> 
+  <ion-item>
+    <ion-input type='text' maxlength="3">Male</ion-input>
+  </ion-item> 
+  <ion-item>
+    <ion-input type='text'>chcekin@gmail.com</ion-input>
+  </ion-item> 
+--> 
+
+  <!-- Used to navigate to another page when button is clicked --> 
+ 

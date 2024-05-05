@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>LOCATION</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div #map id="map" style="height: 50vh;"></div>
+      </ion-col>
+    </ion-row>
+    <!-- Start workout (tracking calories burnt, distance travelled) -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="startWorkout()">Start Workout</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="workoutPathCoordinates.length > 0">
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <p>Distance: {{ calculateDistance() }} km</p>
+            <p>Calories: {{ calculateCalories() }} kcal</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="distance !== null || calories !== null">
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <div *ngIf="distance !== null">
+              <p>Distance: {{ distance }} km</p>
+            </div>
+            <div *ngIf="calories !== null">
+              <p>Calories: {{ calories }} kcal</p>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Weight input -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="floating">Current Weight</ion-label>
+          <ion-input type="number" [(ngModel)]="weight"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

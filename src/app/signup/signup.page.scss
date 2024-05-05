@@ -1,0 +1,159 @@
+ion-content {
+    --background: transparent;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .profile-form ion-list {
+    background-color: transparent;
+  }
+  
+  .profile-icon {
+    font-size: 150px;
+    margin-bottom: 20px;
+    margin-top: -25px;
+  }
+  
+  ion-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-input {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 23px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-top: 15px;
+  }
+  
+  ion-toggle {
+    margin-top: 10px;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  .login-link {
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .login-link:hover {
+    color: darkgreen;
+  }
+  
+  .password-toggle {
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .password-toggle::-moz-focus-inner {
+    border: 0;
+  }
+  .small-calendar .picker-opt {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  
+  .small-calendar .picker-col {
+    width: 70px; /* Adjust the width as per your preference */
+    max-width: 70px; /* Adjust the width as per your preference */
+  }
+  
+  .small-calendar .picker-opts-left,
+  .small-calendar .picker-opts-right {
+    font-size: 12px;
+    padding: 4px;
+  }
+  
+  .small-calendar .picker-toolbar {
+    padding: 0 8px;
+  }
+  
+  .small-calendar .picker-sub-titles {
+    font-size: 12px;
+  }
+  
+  .small-calendar .picker-colum {
+    flex: 0 0 70px; /* Adjust the width as per your preference */
+    max-width: 70px; /* Adjust the width as per your preference */
+  }
+  
+  .small-calendar .picker-opts {
+    font-size: 12px;
+  }
+  
+  .small-calendar .picker-columns {
+    width: auto;
+  }
+
+  .profile-form {
+    .file-input-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 10px;
+      border: 1px dashed #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+  
+      ion-icon {
+        font-size: 32px;
+        margin-right: 10px;
+      }
+  
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+  .circular-border {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 5px; /* change the space between */
+    margin-top: 15px;
+  }
+  
+.circular-border2 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 5px; /* change the space between */
+    margin-left: 15px;
+  }
+
+  .image-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+
+  
+  
+  

@@ -1,0 +1,23 @@
+<div *ngFor="let day of weekDays">
+  <h4>{{ day }}</h4>
+  <ul>
+    <!--ngFor directive to iterate over an array of recipes in the mealPlan[day] variable. Displayed as a list item -->
+    <li *ngFor="let recipe of mealPlan[day]">
+      {{ recipe.food }} (Calories: {{ recipe.calories }}, Fat: {{ recipe.fat }})
+      <button class="remove-button" (click)="removeRecipe(day, recipe)">Remove</button>
+    </li>
+  </ul>
+  <div>
+    <label>Food:</label>
+    <input type="text" #foodInput>
+  </div>
+  <div>
+    <label>Calories:</label>
+    <input type="number" #caloriesInput>
+  </div>
+  <div>
+    <label>Fat:</label>
+    <input type="number" #fatInput>
+  </div>
+  <button (click)="addRecipe(day, foodInput.value, caloriesInput.value, fatInput.value)">Add Recipe</button>
+</div>

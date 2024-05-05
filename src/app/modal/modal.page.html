@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Edit Workout
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Workout Name:</ion-label>
+      <ion-input [(ngModel)]="editedWorkout.name" placeholder="Workout name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>PR:</ion-label>
+      <ion-input [(ngModel)]="editedWorkout.pr" placeholder="Personal record"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Reps:</ion-label>
+      <ion-input [(ngModel)]="editedWorkout.reps" placeholder="Repetitions"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button expand="full" (click)="saveChanges()">Save</ion-button>
+</ion-content>
+
+

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="margin-left: 30px;">
+      TRACK WEIGHT
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <canvas #barCanvas id="barCanvas"></canvas>
+    </ion-card-content>
+  </ion-card>
+  
+  <!--Creates input fields using ngFor and binds them to an array of data-->
+  <ion-item *ngFor="let weight of dataForChart; let i = index">
+    <ion-label position="floating">Week {{i + 1}} Weight</ion-label> <!--Creates a floating label for displaying the week number and weight information.-->
+    <ion-input type="number" [(ngModel)]="dataForChart[i]"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Enter weight</ion-label>
+    <ion-input type="number" [(ngModel)]="newWeight"></ion-input> <!--Two-way binding bound by input field-->
+  </ion-item>
+
+  <!--Buttons for chart interactions-->
+  <ion-button (click)="addWeight()">Add weight</ion-button>
+  <ion-button (click)="updateChart()">Update Chart</ion-button>
+  <ion-button (click)="changeChartType('line')">Line chart</ion-button>
+  <ion-button (click)="changeChartType('bar')">Bar chart</ion-button>
+</ion-content>

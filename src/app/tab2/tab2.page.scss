@@ -1,0 +1,26 @@
+.circular-border {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 5px; /* change the space between */
+    margin-top: 15px;
+  }
+  
+.circular-border2 {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid black;
+    overflow: hidden;
+    margin: 0 5px; /* change the space between */
+    margin-left: 15px;
+  }
+
+  .image-container{
+    display: flex;
+    justify-content: space-around;
+  }

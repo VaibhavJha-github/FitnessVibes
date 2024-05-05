@@ -1,0 +1,80 @@
+/* my-component.component.scss */
+
+:host {
+    display: block;
+    padding: 20px;
+  }
+  
+  h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  li button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 3px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button:hover {
+    background-color: #ccc;
+  }
+  
+  div {
+    margin-bottom: 10px;
+  }
+  
+  div > label {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

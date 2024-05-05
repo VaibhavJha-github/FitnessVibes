@@ -1,0 +1,248 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Workout log</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="ion-text-center">
+    <br />
+  </ion-list>
+  
+  <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Monday</div>
+<!--Monday Checkboxes-->
+  <ion-list>
+    <ion-item>
+      <ion-label>Bench press</ion-label>
+      <img class="images" alt="" src="assets/images/benchpress.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+    
+
+    <ion-item>
+      <ion-label>Incline benchpress</ion-label>
+      <img class="images" alt="" src="assets/images/incline.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked2" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Flexion exercises</ion-label>
+      <img class="images" alt="" src="assets/images/flexion.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked3" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Overhead press</ion-label>
+      <img class="images" alt="" src="assets/images/overhead.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked4" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Lateral raises</ion-label>
+      <img class="images" alt="" src="assets/images/lat.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked5" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Flies</ion-label>
+      <img class="images" alt="" src="assets/images/fly.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked6" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cable crossover</ion-label>
+      <img class="images" alt="" src="assets/images/cross.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked7" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Skull crusher</ion-label>
+      <img class="images" alt="" src="assets/images/skull.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked8" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Triceps extension</ion-label>
+      <img class="images" alt="" src="assets/images/extension.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked9" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Kickbacks</ion-label>
+      <img class="images" alt="" src="assets/images/kick.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked10" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+<!--Tuesday Checkboxes-->
+  <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Tuesday</div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Lat Pull Down</ion-label>
+      <img class="images" alt="" src="assets/images/latpull.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked11" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Rows</ion-label>
+      <img class="images" alt="" src="assets/images/rows.png" style="width: 90px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked12" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pullovers</ion-label>
+      <img class="images" alt="" src="assets/images/pullover.png" style="width: 90px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked13" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Biceps curls</ion-label>
+      <img class="images" alt="" src="assets/images/curl.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked14" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hammer curls</ion-label>
+      <img class="images" alt="" src="assets/images/hamer.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked15" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+    </ion-list>
+<!--Wednesday Checkboxes-->
+    <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Wednesday</div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Squats</ion-label>
+        <img class="images" alt="" src="assets/images/squats.png" style="width: 70px; height: 70px;" />
+        <ion-checkbox slot="end" [(ngModel)]="isChecked16" (ionChange)="saveCheckboxState()"></ion-checkbox>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Deadlifts</ion-label>
+        <img class="images" alt="" src="assets/images/deadlift2.png" style="width: 70px; height: 70px;" />
+        <ion-checkbox slot="end" [(ngModel)]="isChecked17" (ionChange)="saveCheckboxState()"></ion-checkbox>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Lunges</ion-label>
+        <img class="images" alt="" src="assets/images/lunges.png" style="width: 70px; height: 70px;" />
+        <ion-checkbox slot="end" [(ngModel)]="isChecked18" (ionChange)="saveCheckboxState()"></ion-checkbox>
+      </ion-item>
+      </ion-list>
+<!--Thursday Checkboxes-->
+      <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Thursday</div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Rest Day</ion-label>
+        <img class="images" alt="" src="assets/images/rest.png" style="width: 70px; height: 70px;" />
+        <ion-checkbox slot="end" [(ngModel)]="isChecked19" (ionChange)="saveCheckboxState()"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+<!-- Friday Checkboxes-->
+    <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Friday</div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Bench press</ion-label>
+      <img class="images" alt="" src="assets/images/benchpress.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked20" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Incline benchpress</ion-label>
+      <img class="images" alt="" src="assets/images/incline.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked21" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Flexion exercises</ion-label>
+      <img class="images" alt="" src="assets/images/flexion.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked22" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Overhead press</ion-label>
+      <img class="images" alt="" src="assets/images/overhead.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked23" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Lateral raises</ion-label>
+      <img class="images" alt="" src="assets/images/lat.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked24" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Flies</ion-label>
+      <img class="images" alt="" src="assets/images/fly.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked25" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cable crossover</ion-label>
+      <img class="images" alt="" src="assets/images/cross.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked26" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Skull crusher</ion-label>
+      <img class="images" alt="" src="assets/images/skull.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked27" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Triceps extension</ion-label>
+      <img class="images" alt="" src="assets/images/extension.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked28" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Kickbacks</ion-label>
+      <img class="images" alt="" src="assets/images/kick.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked29" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+<!--Saturday Checkboxes-->
+  <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Saturday</div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Lat Pull Down</ion-label>
+      <img class="images" alt="" src="assets/images/latpull.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked30" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Rows</ion-label>
+      <img class="images" alt="" src="assets/images/rows.png" style="width: 90px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked31" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pullovers</ion-label>
+      <img class="images" alt="" src="assets/images/pullover.png" style="width: 90px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked32" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Biceps curls</ion-label>
+      <img class="images" alt="" src="assets/images/curl.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked33" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Hammer curls</ion-label>
+      <img class="images" alt="" src="assets/images/hamer.png" style="width: 70px; height: 70px;" />
+      <ion-checkbox slot="end" [(ngModel)]="isChecked34" (ionChange)="saveCheckboxState()"></ion-checkbox>
+    </ion-item>
+    </ion-list>
+<!-- Sunday Checkboxes-->
+    <div style="font-size: 24px; margin-top: 20px; margin-bottom: 20px; margin-left: 15px; color: aqua;">Sunday</div>
+    <ion-list>
+      <ion-item>
+        <ion-label>Rest day</ion-label>
+        <img class="images" alt="" src="assets/images/rest.png" style="width: 70px; height: 70px;" />
+        <ion-checkbox slot="end" [(ngModel)]="isChecked35" (ionChange)="saveCheckboxState()"></ion-checkbox>
+      </ion-item>
+      </ion-list>
+
